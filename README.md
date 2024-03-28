@@ -1,5 +1,7 @@
 # BOLD Moments Dataset
-![mosaic gif of example BMD videos][images/BOLDMoments_mosaic.gif]
+<p align="center">
+    <img src="images/BOLDMoments_mosaic.gif" width="50%" height="auto">
+</p>
 
 This GitHub repository contains starter code for the BOLD Moments dataset (BMD) as described in
 the publication, ["BOLD Moments: modeling short visual events through a video fMRI dataset and metadata."]
