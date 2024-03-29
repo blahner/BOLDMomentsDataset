@@ -6,7 +6,7 @@
 This GitHub repository contains starter code for the BOLD Moments dataset (BMD) as described in
 the publication, ["BOLD Moments: modeling short visual events through a video fMRI dataset and metadata."](https://www.biorxiv.org/content/10.1101/2023.03.12.530887v2)
     
-The dataset contains fMRI brain responses to 1,102 3 second videos for 10 subjects. Each video
+The dataset contains fMRI brain responses to 1,102 3 second videos for 10 subjects. Each 'in-the-wild' video
 includes at least 5x human-annotated object, scene, action, and text description labels, and 
 1x spoken transcription, memorability score, and memorability decay rate. The 1000-video training
 set was repeated to each subject 3x and the 102-video testing set was repeated to each subject
@@ -23,7 +23,7 @@ you can do with it. The paths are relative to the dataset repository paths. The 
 the manuscript is kept in their appropriate locations in the BMD repository under ./derivatives. 
 
 ### Third party imports
-The scripts make heavy use of following third party imports (among others):
+The scripts make heavy use of the following third party imports (among others):
 - nilearn
 - nibabel
 - scipy
