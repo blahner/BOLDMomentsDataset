@@ -4,8 +4,7 @@
 </p>
 
 This GitHub repository contains starter code for the BOLD Moments dataset (BMD) as described in
-the publication, ["BOLD Moments: modeling short visual events through a video fMRI dataset and metadata."]
-(https://www.biorxiv.org/content/10.1101/2023.03.12.530887v2)
+the publication, ["BOLD Moments: modeling short visual events through a video fMRI dataset and metadata."](https://www.biorxiv.org/content/10.1101/2023.03.12.530887v2)
     
 The dataset contains fMRI brain responses to 1,102 3 second videos for 10 subjects. Each video
 includes at least 5x human-annotated object, scene, action, and text description labels, and 
@@ -23,7 +22,7 @@ These scripts help users familiarize themselves with different versions of the d
 you can do with it. The paths are relative to the dataset repository paths. The code used for analyses in 
 the manuscript is kept in their appropriate locations in the BMD repository under ./derivatives. 
 
-### third party imports
+### Third party imports
 The scripts make heavy use of following third party imports (among others):
 - nilearn
 - nibabel
@@ -31,14 +30,7 @@ The scripts make heavy use of following third party imports (among others):
 - hcp_utils
 - numpy
 
-### citation
+### Citation
 If you use this dataset, please cite:
 
-@article{lahner2023bold,
-  title={BOLD Moments: modeling short visual events through a video fMRI dataset and metadata},
-  author={Lahner, Benjamin and Dwivedi, Kshitij and Iamshchinina, Polina and Graumann, Monika and Lascelles, Alex and Roig, Gemma and Gifford, Alessandro Thomas and Pan, Bowen and Jin, SouYoung and Ratan Murty, N Apurva and others},
-  journal={bioRxiv},
-  pages={2023--03},
-  year={2023},
-  publisher={Cold Spring Harbor Laboratory}
-}
+Lahner, B., Dwivedi, K., Iamshchinina, P., Graumann, M., Lascelles, A., Roig, G., ... & Cichy, R. (2023). BOLD Moments: modeling short visual events through a video fMRI dataset and metadata. bioRxiv, 2023-03.
