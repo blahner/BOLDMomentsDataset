@@ -3,7 +3,7 @@ DATASET_ROOT="/your/path/to/BOLDMomentsDataset"
 TMP="/your/path/to/tmp_directory"
 WORK="$TMP/tmp/BMD-workdir"
 FMRIPREP_VERSION="23.2.0"
-USERNAME=blahner
+USERNAME=yourusername
 
 #to deal with permission issues that can arise when creating folders in docker
 su $USERNAME -c "mkdir -p $DATASET_ROOT/derivatives/versionB"
@@ -19,7 +19,7 @@ for subj in {01..10}; do
     #--user XXXXX:XXXXX \ a user and group id to set docker permissions
     -it --rm \
     -v $DATASET_ROOT/Nifti:/data:ro \
-    -v $DATASET_ROOT/derivatives/versionD:/out \
+    -v $DATASET_ROOT/derivatives/versionB:/out \
     -v $WORK:/work \
     -v $FREESURFER_HOME/license.txt:/opt/freesurfer_license/license.txt \
     \
