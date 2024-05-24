@@ -16,6 +16,14 @@ is available for download in this OpenNeuro repository:
 
 ### ./downloads/
 These bash scripts are a template to help you download the data you want from the BMD repository.
+Since the derivatives of this dataset are very large (mostly due to the 9 TR estimates per trial in versionA),
+you will most likely NOT want to download all the data in the repository.
+
+We have found the easiest ways to download the data are:
+ - scp command through s3 buckets (see code here)
+ - oppeneuro-py (https://github.com/hoechenberger/openneuro-py)
+
+We provide example scripts for both methods. The "download" tab in the OpenNeuro repository contains additional methods to donwload the dataset.
 
 ### ./examples/
 These scripts help users familiarize themselves with different versions of the dataset and different analyses
