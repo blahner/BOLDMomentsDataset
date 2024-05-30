@@ -4,9 +4,11 @@
 </p>
 
 This GitHub repository contains starter code for the BOLD Moments dataset (BMD) as described in
-the publication, ["BOLD Moments: modeling short visual events through a video fMRI dataset and metadata."](https://www.biorxiv.org/content/10.1101/2023.03.12.530887v2)
+the publication, ["Modeling short visual events through the BOLD Moments video fMRI dataset and metadata."](https://www.biorxiv.org/content/10.1101/2023.03.12.530887v2)
+
+The dataset is deposited in this [OpenNeuro repository](todo).
     
-The dataset contains fMRI brain responses to 1,102 3 second videos for 10 subjects. Each 'in-the-wild' video
+BMD contains fMRI brain responses to 1,102 3 second videos for 10 subjects. Each 'in-the-wild' video
 includes at least 5x human-annotated object, scene, action, and text description labels, and 
 1x spoken transcription, memorability score, and memorability decay rate. The 1000-video training
 set was repeated to each subject 3x and the 102-video testing set was repeated to each subject
@@ -20,15 +22,15 @@ Since the derivatives of this dataset are very large (mostly due to the 9 TR est
 you will most likely NOT want to download all the data in the repository.
 
 We have found the easiest ways to download the data are:
- - scp command through s3 buckets (see code here)
+ - scp command through s3 buckets 
  - oppeneuro-py (https://github.com/hoechenberger/openneuro-py)
 
 We provide example scripts for both methods. The "download" tab in the OpenNeuro repository contains additional methods to donwload the dataset.
 
 ### ./examples/
 These scripts help users familiarize themselves with different versions of the dataset and different analyses
-you can do with it. The paths are relative to the dataset repository paths. The code used for analyses in 
-the manuscript is kept in their appropriate locations in the BMD repository under ./derivatives. 
+you can do with it. The files in './examples/beta_preparation' give example code used in version B for fMRIPrep preprocessing, GLM estimation, and beta preparation. The paths are relative to the dataset repository paths. The code used for analyses in 
+the manuscript is kept in their appropriate locations in the OpenNeuro repository under ./derivatives/versionX/scripts. 
 
 ### Third party imports
 The scripts make heavy use of the following third party imports (among others):
