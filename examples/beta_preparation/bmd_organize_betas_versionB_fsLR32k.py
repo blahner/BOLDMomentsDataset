@@ -10,7 +10,7 @@ def main(args):
     print(f"starting {subject}")
     betas_tmp = {f"vid{stim:04}": [] for stim in range(1,1103)}
     beta_type = "TYPED_FITHRF_GLMDENOISE_RR"
-    #load fMRI data from that subject and run
+    #load fMRI data from that subject and session
     for ses in range(2,6):
         print(f"loading session {ses}")
         session = f"ses-{ses:02}"
@@ -21,7 +21,7 @@ def main(args):
 
         with open(os.path.join(fmri_path, subject, session, f"{subject}_{session}_conditionOrderDM.pkl"), 'rb') as f:
             events_run, _ = pickle.load(f)
-
+        #here we map the video condition to the beta estimate ordering by putting the condition name in 'stims'
         stims = []
         for event in events_run:
             stims.extend(event['trial_type'])
@@ -34,7 +34,6 @@ def main(args):
             elif int(stim.split('vid')[-1]) >= 1001:
                 stim_idx_test.append(idx)
             
-        #zscore the test and train data separately
         fmri_data_wb_train = fmri_data_wb[stim_idx_train, :]
         fmri_data_wb_test = fmri_data_wb[stim_idx_test, :]
 
@@ -75,6 +74,12 @@ def main(args):
             betas_test[stimcount, repcount, :] = np.array(v) #sorts the responses into an array. separate training and testing array
 
     #save betas
+    #now the order of this prepared beta matrix matches with the stimulus filename, 
+    #so betas_train[0,:,:] --> beta responses to video 0001,
+    # betas_train[1,:,:] --> beta responses to video 0002,
+    # beas_train[999,:,:] --> beta responses to video 1000,
+    # betas_test[0,:,:] --> beta responses to video 1001, etc.
+
     save_root = os.path.join(fmri_path, f"{subject}", "prepared_betas")
     if not os.path.exists(save_root):
         os.makedirs(save_root)

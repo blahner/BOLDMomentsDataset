@@ -8,7 +8,7 @@ the publication, ["Modeling short visual events through the BOLD Moments video f
 
 The dataset is deposited in this [OpenNeuro repository](todo).
     
-BMD contains fMRI brain responses to 1,102 3 second videos for 10 subjects. Each 'in-the-wild' video
+BMD contains fMRI brain responses to 1,102 3 second videos for 10 subjects. Each naturalistic video
 includes at least 5x human-annotated object, scene, action, and text description labels, and 
 1x spoken transcription, memorability score, and memorability decay rate. The 1000-video training
 set was repeated to each subject 3x and the 102-video testing set was repeated to each subject
@@ -18,11 +18,11 @@ is available for download in this OpenNeuro repository:
 
 ### ./downloads/
 These bash scripts are a template to help you download the data you want from the BMD repository.
-Since the derivatives of this dataset are very large (mostly due to the 9 TR estimates per trial in versionA),
+Since the derivatives of this dataset are very large (mostly due to the 9 TR estimates per trial in version A),
 you will most likely NOT want to download all the data in the repository.
 
-We have found the easiest ways to download the data are:
- - scp command through s3 buckets 
+We have found the quickest and easiest ways to download the data are:
+ - scp command through s3 buckets (see the 'download' tab in the OpenNeuro repository for more info)
  - oppeneuro-py (https://github.com/hoechenberger/openneuro-py)
 
 We provide example scripts for both methods. The "download" tab in the OpenNeuro repository contains additional methods to donwload the dataset.
