@@ -22,7 +22,7 @@ Since the derivatives of this dataset are very large (mostly due to the 9 TR est
 you will most likely NOT want to download all the data in the repository.
 
 We have found the quickest and easiest ways to download the data are:
- - scp command through s3 buckets (see the 'download' tab in the OpenNeuro repository for more info)
+ - aws s3 sync --no-sign-request (aws command line interface, https://aws.amazon.com/cli/)
  - oppeneuro-py (https://github.com/hoechenberger/openneuro-py)
 
 We provide example scripts for both methods. The "download" tab in the OpenNeuro repository contains additional methods to donwload the dataset.
