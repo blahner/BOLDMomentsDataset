@@ -46,7 +46,6 @@ def main(args):
         print("#" * 20)
     sub_func_root = os.path.join(args.dataset_root, "derivatives", "versionB", "fmriprep", subject, session, "func")
     tmp_root = os.path.join(args.dataset_root, "derivatives", "versionB","tmp") #to temporarily store smoothed cifti files
-    template_flow_dir = os.path.join(args.templateflow_root,"templateflow","tpl-fsLR")
     data = []
     design = []
     numruns = 5
@@ -65,8 +64,8 @@ def main(args):
         volume_kernel=9
         direction='COLUMN' #because it is .dtseries formal
         cifti_output=os.path.join(tmp_root, f"{subject}_{session}_task-{task}_run-{run}_space-fsLR_den-91k_bold_smooth-{surface_kernel}.dtseries.nii")
-        left_surface=os.path.join(template_flow_dir,"tpl-fsLR_den-32k_hemi-L_midthickness.surf.gii")
-        right_surface=os.path.join(template_flow_dir,"tpl-fsLR_den-32k_hemi-R_midthickness.surf.gii")
+        left_surface=os.path.join(args.templateflow_root,"tpl-fsLR","tpl-fsLR_den-32k_hemi-L_midthickness.surf.gii")
+        right_surface=os.path.join(args.templateflow_root,"tpl-fsLR","tpl-fsLR_den-32k_hemi-R_midthickness.surf.gii")
 
         #this requires you to download HCP workbench command
         cmd = f"wb_command -cifti-smoothing -fwhm \
@@ -87,7 +86,7 @@ def main(args):
             if args.verbose:
                 print("This smoothed cifti file aready exists. Loading it now.")
         
-        cifti_ts = nib.load(os.path.join(tmp_root, cifti_output))
+        cifti_ts = nib.load(cifti_output)
         cifti_data = cifti_ts.get_fdata()
 
         #interpolate time series
@@ -178,7 +177,7 @@ if __name__ == '__main__':
     parser = argparse.ArgumentParser()
     parser.add_argument("-s", "--subject", type=int, required=True, help="The subject from 1-10 that you wish to process")
     parser.add_argument("-d", "--dataset_root", default="/your/path/to/BOLDMomentsDataset", help="The root path to the dataset directory")
-    parser.add_argument("-t", "--templateflow_root", default="/your/path/to/templateflow", help="The root path to the dataset directory")
+    parser.add_argument("-t", "--templateflow_root", default="/your/path/to/templateflow", help="The root path to the templateflow directory")
     parser.add_argument("-v", "--verbose", action="store_true", help="Print verbose")
     args = parser.parse_args()
 
