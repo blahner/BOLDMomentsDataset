@@ -27,6 +27,8 @@ We have found the quickest and easiest ways to download the data are:
 
 We provide example scripts for both methods. The "download" tab in the OpenNeuro repository contains additional methods to donwload the dataset.
 
+See this [GitHub repository](https://github.com/pbw-Berwin/M4-pretrained) for download and inference instructions for the M4 TSM ResNet50 model.
+
 ### ./examples/
 These scripts help users familiarize themselves with different versions of the dataset and different analyses
 you can do with it. The files in './examples/beta_preparation' give example code used in version B for fMRIPrep preprocessing, GLM estimation, and beta preparation. The paths are relative to the dataset repository paths. The code used for analyses in 
@@ -43,4 +45,4 @@ The scripts make heavy use of the following third party imports (among others):
 ### Citation
 If you use this dataset, please cite:
 
-Lahner, B., Dwivedi, K., Iamshchinina, P., Graumann, M., Lascelles, A., Roig, G., ... & Cichy, R. (2023). BOLD Moments: modeling short visual events through a video fMRI dataset and metadata. bioRxiv, 2023-03.
+Lahner et al. Modeling short visual events through the BOLD Moments video fMRI dataset and metadata. Nature Communications, (2024).
