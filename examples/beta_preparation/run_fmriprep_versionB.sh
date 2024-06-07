@@ -1,3 +1,4 @@
+#!/bin/bash
 set -e
 DATASET_ROOT="/your/path/to/BOLDMomentsDataset"
 TMP="/your/path/to/tmp_directory"

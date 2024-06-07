@@ -1,3 +1,4 @@
+#!/bin/bash
 set -e
 LOCAL_DIR="/data/vision/oliva/scratch/datasets/BOLDMomentsDataset_tmp/derivatives"
 mkdir -p "${LOCAL_DIR}/Temporal_Shift_Module_DNN"

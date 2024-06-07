@@ -30,3 +30,10 @@ for sub in {01..10}; do
     "s3://openneuro.org/ds005165/sub-${sub}/" \
     "${sub_dir}/"
 done
+
+#download stimuli folder
+stim_dir="${LOCAL_DIR}/Nifti/stimuli"
+mkdir -p "${stim_dir}"
+aws s3 cp --no-sign-request --recursive \
+"s3://openneuro.org/ds005165/stimuli/" \
+"${stim_dir}/"
