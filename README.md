@@ -17,9 +17,11 @@ video-based functional localizer, and functional resting state scans. All data a
 is available for download in this OpenNeuro repository:
 
 ### ./downloads/
-These bash scripts are a template to help you download the data you want from the BMD repository.
+These shell scripts demonstrate how to download the data you want from the BMD repository. Adapt these scripts as needed to download the
+specific parts of the dataset you want.
 Since the derivatives of this dataset are very large (mostly due to the 9 TR estimates per trial in version A),
-you will most likely NOT want to download all the data in the repository.
+you will most likely NOT want to download all the data in the repository. We recommend using data in version B because it is a bit higher quality with better preprocessing
+registration and GLM analysis with GLMsingle (Prince et al., 2022).
 
 We have found the quickest and easiest ways to download the data are:
  - aws s3 sync --no-sign-request (aws command line interface, https://aws.amazon.com/cli/)
