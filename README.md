@@ -36,6 +36,9 @@ These scripts help users familiarize themselves with different versions of the d
 you can do with it. The files in './examples/beta_preparation' give example code used in version B for fMRIPrep preprocessing, GLM estimation, and beta preparation. The paths are relative to the dataset repository paths. The code used for analyses in 
 the manuscript is kept in their appropriate locations in the OpenNeuro repository under ./derivatives/versionX/scripts. 
 
+### Stimulus set download
+To comply with different licensing requirements, we make the stimulus set videos (and various derivatives, like frames) available to download [here](https://boldmomentsdataset.csail.mit.edu/stimulus_set). If after reading the accompanying README file and agreeing to the terms of use, you can download the stimulus set and access it with the password.
+
 ### Third party imports
 The scripts make heavy use of the following third party imports (among others):
 - nilearn
