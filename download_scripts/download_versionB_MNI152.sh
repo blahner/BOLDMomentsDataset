@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 #local absolute path to where you want to download the dataset
-LOCAL_DIR="/data/vision/oliva/scratch/datasets/BOLDMomentsDataset_tmp"
+LOCAL_DIR="your/path/to/BOLDMomentsDataset"
 dataset_path="derivatives/versionB/MNI152"
 #create directory paths that mimic the openneuro dataset structure
 mkdir -p "${LOCAL_DIR}/${dataset_path}"

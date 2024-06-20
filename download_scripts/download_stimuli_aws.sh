@@ -1,7 +1,7 @@
 #!/bin/bash
 set -e
 #local absolute path to where you want to download the dataset
-LOCAL_DIR="/data/vision/oliva/scratch/datasets/BOLDMomentsDataset_tmp"
+LOCAL_DIR="your/path/to/BOLDMomentsDataset"
 
 #create directory paths that mimic the openneuro dataset structure
 mkdir -p "${LOCAL_DIR}/derivatives/stimuli_metadata"
@@ -12,7 +12,6 @@ dataset_files=(
     "annotations.json"
     "llm_frame_annotations.json"
     "annotations_fieldnames.json"
-    "frames.zip"
     )
 
 for file in "${dataset_files[@]}"; do
@@ -21,11 +20,8 @@ for file in "${dataset_files[@]}"; do
     "${LOCAL_DIR}/derivatives/stimuli_metadata/"
 done
 
-#download the folders
+#download the folders. Reminder that the stimulus set .mp4 files and jpg frames must be downloaded from a separate link, detailed in the github repo
 dataset_folders=(
-    "mp4_h264"
-    "stimuli"
-    "frames_middle"
     "ME_feats_matlab"
 )
 for folder in "${dataset_folders[@]}"; do
