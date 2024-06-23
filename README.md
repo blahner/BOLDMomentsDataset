@@ -6,7 +6,7 @@
 This GitHub repository contains starter code for the BOLD Moments dataset (BMD) as described in
 the publication, ["Modeling short visual events through the BOLD Moments video fMRI dataset and metadata."](https://www.biorxiv.org/content/10.1101/2023.03.12.530887v2)
 
-The dataset is deposited in this [OpenNeuro repository](todo).
+The dataset is deposited in this [OpenNeuro repository]([todo](https://openneuro.org/datasets/ds005165)).
     
 BMD contains fMRI brain responses to 1,102 3 second videos for 10 subjects. Each naturalistic video
 includes at least 5x human-annotated object, scene, action, and text description labels, and 
