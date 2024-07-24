@@ -4,7 +4,7 @@
 </p>
 
 This GitHub repository contains starter code for the BOLD Moments dataset (BMD) as described in
-the publication, ["Modeling short visual events through the BOLD Moments video fMRI dataset and metadata."](https://www.biorxiv.org/content/10.1101/2023.03.12.530887v2)
+the publication, ["Modeling short visual events through the BOLD Moments video fMRI dataset and metadata."](https://www.nature.com/articles/s41467-024-50310-3)
 
 The dataset is deposited in this [OpenNeuro repository](https://openneuro.org/datasets/ds005165).
     
@@ -50,4 +50,4 @@ The scripts make heavy use of the following third party imports (among others):
 ### Citation
 If you use this dataset, please cite:
 
-Lahner et al. Modeling short visual events through the BOLD Moments video fMRI dataset and metadata. Nature Communications, (2024).
+Lahner, B., Dwivedi, K., Iamshchinina, P. et al. Modeling short visual events through the BOLD moments video fMRI dataset and metadata. Nat Commun 15, 6241 (2024). https://doi.org/10.1038/s41467-024-50310-3
